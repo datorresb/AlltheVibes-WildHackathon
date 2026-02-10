@@ -47,6 +47,7 @@ The repo includes:
 - **An automated documentation engine** that keeps README and CHANGELOG in sync on every push
 - **A Copilot skill** that teaches Copilot how to analyze diffs and write changelogs
 - **Fun swarm tools** like the Vibe Oracle and ASCII Swarm Mascot
+- **A Web API** to serve vibes over HTTP with FastAPI
 - Whatever else the swarm decides to build
 
 ---
@@ -58,11 +59,17 @@ The repo includes:
 git clone https://github.com/shyamsridhar123/AlltheVibes-WildHackathon.git
 cd AlltheVibes-WildHackathon
 
+# Install dependencies (for Web API)
+pip install -r requirements.txt
+
 # See the swarm mascot
 python swarm_mascot.py
 
 # Consult the Vibe Oracle
 python vibe_oracle.py "what should I build?"
+
+# Or start the Web API
+python api.py
 
 # Make changes, push, repeat every 5 minutes 🐠
 ```
@@ -77,6 +84,51 @@ python vibe_oracle.py "what should I build?"
 | 🔮 Vibe Oracle | ZacharyLuz | Chaotic vibe generator — ask it anything, receive cosmic wisdom | `python vibe_oracle.py "your question"` |
 | 🐝 Swarm Mascot | ZacharyLuz | ASCII art mascot + banner for the swarm | `python swarm_mascot.py` |
 | 🐠 Nemo README | ZacharyLuz | This README with Nemo ASCII art and contribution guide | You're reading it |
+| 🌐 Web API | gabland-msft | FastAPI service to serve vibes over HTTP | `python api.py` |
+
+---
+
+## 🌐 Using the Web API
+
+The Vibe Oracle is now available as a REST API!
+
+### Installation
+```bash
+pip install -r requirements.txt
+```
+
+### Start the Server
+```bash
+# Start with Python
+python api.py
+
+# Or use uvicorn directly
+uvicorn api:app --reload
+```
+
+The API will be available at `http://localhost:8000`
+
+### API Endpoints
+- `GET /` - Welcome message and endpoint list
+- `GET /vibe?query=your-question` - Get a single vibe reading
+- `GET /vibes?count=5` - Get multiple vibe readings (1-20)
+- `GET /health` - Health check
+- `GET /docs` - Interactive API documentation (Swagger UI)
+
+### Example API Calls
+```bash
+# Get a vibe
+curl http://localhost:8000/vibe
+
+# Get a vibe with a query
+curl "http://localhost:8000/vibe?query=Should%20I%20ship%20it?"
+
+# Get 5 vibes
+curl http://localhost:8000/vibes?count=5
+
+# Health check
+curl http://localhost:8000/health
+```
 
 ---
 
@@ -125,8 +177,10 @@ AlltheVibes-WildHackathon/
 │   └── skills/
 │       └── readme-changelog-generator/
 │           └── SKILL.md                     # Copilot skill definition
+├── api.py                                   # FastAPI web service
 ├── CHANGELOG.md                             # Auto-generated changelog
 ├── README.md                                # This file (you are here 🐠)
+├── requirements.txt                         # Python dependencies
 ├── swarm_mascot.py                          # ASCII swarm mascot
 └── vibe_oracle.py                           # Chaotic vibe generator
 ```
