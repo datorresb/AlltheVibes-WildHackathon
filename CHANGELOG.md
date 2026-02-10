@@ -1,6 +1,26 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `87952b8` to `95d63a4`
+
+### 📦 Other
+- 🌀 CHAOS UPGRADE: animated mascot, turbo oracle, swarm chaos engine
+
+<details><summary>Files changed</summary>
+
+```
+ swarm_chaos.py  | 178 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ swarm_mascot.py | 161 +++++++++++++++++++++++++++++++++++++++++++++++---
+ vibe_oracle.py  | 112 ++++++++++++++++++++++++++++++++---
+ 3 files changed, 435 insertions(+), 16 deletions(-)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `9ec00ba` to `978201f`
 
 ### 📦 Other
