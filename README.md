@@ -86,3 +86,20 @@ def my_tool(arg1: str) -> str:
 ```
 
 The tool is automatically registered and available to the agent — no other changes needed.
+
+## Web API
+
+The Vibe Oracle is also available as a REST API via FastAPI.
+
+### Start the Server
+```bash
+python api.py
+# Or: uvicorn api:app --reload
+```
+
+### API Endpoints
+- `GET /` — Welcome message and endpoint list
+- `GET /vibe?query=your-question` — Get a single vibe reading
+- `GET /vibes?count=5` — Get multiple vibe readings (1-20)
+- `GET /health` — Health check
+- `GET /docs` — Interactive API documentation (Swagger UI)
