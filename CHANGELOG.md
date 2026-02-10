@@ -1,6 +1,30 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `6277906` to `d5354a4`
+
+### 🆕 New Features
+- feat: add MacGyver agent — resourceful MCP tool improviser for swarm coordination
+
+### 📦 Other
+- Merge pull request #16 from datorresb/feat/macgyver-agent
+
+<details><summary>Files changed</summary>
+
+```
+ .claude/skills/macgyver/SKILL.md               | 148 +++++++++++++++++++++++++
+ .github/agents/macgyver.agent.md               | 125 +++++++++++++++++++++
+ README.md                                      |  14 +++
+ docs/plans/2026-02-10-macgyver-agent-design.md |  72 ++++++++++++
+ 4 files changed, 359 insertions(+)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `5277c94` to `2010742`
 
 ### 🐛 Bug Fixes
