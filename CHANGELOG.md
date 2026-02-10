@@ -1,6 +1,34 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `ce9cc7b` to `bc2b103`
+
+### 🆕 New Features
+- feat: implement Redis pub/sub message bus + infrastructure
+
+### 📦 Other
+- Merge pull request #27 from gabland-msft/feature/message-bus-pubsub
+
+<details><summary>Files changed</summary>
+
+```
+ src/config/index.ts             |  40 ++++
+ src/db/redis.test.ts            | 261 ++++++++++++++++++++
+ src/db/redis.ts                 | 264 +++++++++++++++++++++
+ src/services/index.ts           |  17 ++
+ src/services/messageBus.test.ts | 512 ++++++++++++++++++++++++++++++++++++++++
+ src/services/messageBus.ts      | 375 +++++++++++++++++++++++++++++
+ src/types/messageBus.ts         | 177 ++++++++++++++
+ src/utils/logger.ts             |  46 ++++
+ 8 files changed, 1692 insertions(+)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Merge PRs #18, #19, #20 to main
 
 ### 🆕 New Features
