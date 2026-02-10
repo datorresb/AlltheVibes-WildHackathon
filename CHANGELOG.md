@@ -1,6 +1,101 @@
 # Changelog
 
 
+## [2026-02-10] — Changes `eb78981` to `67d7276`
+
+### 📦 Other
+- Add best practices for React and Next.js performance optimization
+
+<details><summary>Files changed</summary>
+
+```
+ .beads/.gitignore                                  |   46 +
+ .beads/README.md                                   |   81 +
+ .beads/config.yaml                                 |    4 +
+ .beads/interactions.jsonl                          |    0
+ .beads/issues.jsonl                                |    0
+ .beads/metadata.json                               |    4 +
+ .gitattributes                                     |    3 +
+ .github/agents/beth.agent.md                       |  329 +++
+ .github/agents/developer.agent.md                  |  572 +++++
+ .github/agents/product-manager.agent.md            |  272 +++
+ .github/agents/researcher.agent.md                 |  338 +++
+ .github/agents/security-reviewer.agent.md          |  465 ++++
+ .github/agents/tester.agent.md                     |  496 ++++
+ .github/agents/ux-designer.agent.md                |  393 +++
+ .github/skills/framer-components/SKILL.md          |  564 +++++
+ .github/skills/prd/SKILL.md                        |  244 ++
+ .github/skills/security-analysis/SKILL.md          |  799 +++++++
+ .github/skills/shadcn-ui/SKILL.md                  |  562 +++++
+ .../skills/vercel-react-best-practices/AGENTS.md   | 2516 ++++++++++++++++++++
+ .../skills/vercel-react-best-practices/SKILL.md    |  125 +
+ .../rules/advanced-event-handler-refs.md           |   55 +
+ .../rules/advanced-use-latest.md                   |   49 +
+ .../rules/async-api-routes.md                      |   38 +
+ .../rules/async-defer-await.md                     |   80 +
+ .../rules/async-dependencies.md                    |   36 +
+ .../rules/async-parallel.md                        |   28 +
+ .../rules/async-suspense-boundaries.md             |   99 +
+ .../rules/bundle-barrel-imports.md                 |   59 +
+ .../rules/bundle-conditional.md                    |   31 +
+ .../rules/bundle-defer-third-party.md              |   49 +
+ .../rules/bundle-dynamic-imports.md                |   35 +
+ .../rules/bundle-preload.md                        |   50 +
+ .../rules/client-event-listeners.md                |   74 +
+ .../rules/client-localstorage-schema.md            |   71 +
+ .../rules/client-passive-event-listeners.md        |   48 +
+ .../rules/client-swr-dedup.md                      |   56 +
+ .../rules/js-batch-dom-css.md                      |   57 +
+ .../rules/js-cache-function-results.md             |   80 +
+ .../rules/js-cache-property-access.md              |   28 +
+ .../rules/js-cache-storage.md                      |   70 +
+ .../rules/js-combine-iterations.md                 |   32 +
+ .../rules/js-early-exit.md                         |   50 +
+ .../rules/js-hoist-regexp.md                       |   45 +
+ .../rules/js-index-maps.md                         |   37 +
+ .../rules/js-length-check-first.md                 |   49 +
+ .../rules/js-min-max-loop.md                       |   82 +
+ .../rules/js-set-map-lookups.md                    |   24 +
+ .../rules/js-tosorted-immutable.md                 |   57 +
+ .../rules/rendering-activity.md                    |   26 +
+ .../rules/rendering-animate-svg-wrapper.md         |   47 +
+ .../rules/rendering-conditional-render.md          |   40 +
+ .../rules/rendering-content-visibility.md          |   38 +
+ .../rules/rendering-hoist-jsx.md                   |   46 +
+ .../rules/rendering-hydration-no-flicker.md        |   82 +
+ .../rules/rendering-svg-precision.md               |   28 +
+ .../rules/rerender-defer-reads.md                  |   39 +
+ .../rules/rerender-dependencies.md                 |   45 +
+ .../rules/rerender-derived-state.md                |   29 +
+ .../rules/rerender-functional-setstate.md          |   74 +
+ .../rules/rerender-lazy-state-init.md              |   58 +
+ .../rules/rerender-memo.md                         |   44 +
+ .../rules/rerender-simple-expression-in-memo.md    |   35 +
+ .../rules/rerender-transitions.md                  |   40 +
+ .../rules/server-after-nonblocking.md              |   73 +
+ .../rules/server-auth-actions.md                   |   96 +
+ .../rules/server-cache-lru.md                      |   41 +
+ .../rules/server-cache-react.md                    |   76 +
+ .../rules/server-dedup-props.md                    |   65 +
+ .../rules/server-parallel-fetching.md              |   83 +
+ .../rules/server-serialization.md                  |   38 +
+ .github/skills/web-design-guidelines/SKILL.md      |   39 +
+ .vscode/settings.json                              |   16 +
+ AGENTS.md                                          |   95 +
+ Backlog.md                                         |   80 +
+ README.md                                          |  102 +-
+ agent.py                                           |  240 ++
+ mcp.json.example                                   |    9 +
+ tools.py                                           |  273 +++
+ 78 files changed, 11244 insertions(+), 35 deletions(-)
+```
+</details>
+
+---
+
+
+
+
 ## [2026-02-10] — Changes `697d4b0` to `520f59f`
 
 ### 🆕 New Features
