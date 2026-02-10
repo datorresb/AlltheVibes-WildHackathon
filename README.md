@@ -42,6 +42,20 @@ cp .env.example .env
 | `AZURE_AI_API_KEY` | API key for authentication |
 | `AZURE_AI_MODEL` | Model name (default: `claude-opus-4-5-20250219`) |
 
+### MacGyver Agent
+
+🧰 **MacGyver** (`.github/agents/macgyver.agent.md`) — Resourceful problem-solver that improvises MCP tools from whatever's available. Never says "I can't" — give it a git log and a JSON schema, that's all it needs.
+
+Invoke `@macgyver` in VS Code Copilot Chat and describe a swarm coordination problem. MacGyver will:
+
+1. **Assess** the situation (scan repo, commits, conflicts)
+2. **Inventory** available resources (tools, APIs, files)
+3. **Improvise** a solution using known coordination patterns
+4. **Build** a working MCP tool definition
+5. **Verify** it works against the actual repo
+
+Any agent can also load the MacGyver skill from `.claude/skills/macgyver/SKILL.md` to adopt the improvisation methodology.
+
 ### 4. Run the agent
 
 ```bash
